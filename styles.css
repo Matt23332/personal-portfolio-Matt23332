@@ -20,18 +20,20 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #f4f4f4;
   padding: 10px 15px;
   display: inline-block;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #45a;
+  border-radius: 4px;
+  
 }
 
 header, section {
-  background: white;
+  background: #45a;
   padding: 20px;
   margin-top: 20px;
   border-radius: 8px;
