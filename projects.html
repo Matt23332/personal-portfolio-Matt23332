@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects - My Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 16px;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .project-card h2 {
+      margin: 10px 0 5px;
+    }
+
+    .project-card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .project-links a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -18,12 +59,38 @@
 
   <section>
     <h1>Projects</h1>
-    <p>List of projects with descriptions. Students can add/edit/remove project entries here.</p>
-    <ul>
-      <li>Project 1 - Description</li>
-      <li>Project 2 - Description</li>
-      <li>Project 3 - Description</li>
-    </ul>
+    <p>Below is a list of some of the projects I have worked on:</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="image/project1.png" alt="Project 1 Screenshot" />
+        <h2>Personal Portfolio Website</h2>
+        <p>A responsive personal portfolio website built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+        <div class="project-links">
+          <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+          <a href="https://yourusername.github.io/project1" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/project_2.png" alt="Project 2 Screenshot" />
+        <h2>Personal Finance App</h2>
+        <p>An application that helps users manage their finances by tracking expenses and assisting them to budget.</p>
+        <div class="project-links">
+          <a href="https://github.com/Matt23332/PersonalFinanceManager" target="_blank">View on GitHub</a>
+          <a href="https://Matt23332.github.io/PersonalFinanceManager" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/project_3.png" alt="Project 3 Screenshot" />
+        <h2>MazeDungeon Game</h2>
+        <p>A Pac-Man inspired game built with Python and Pygame where the player collects the treasures while avoiding any obstacles.</p>
+        <div class="project-links">
+          <a href="https://github.com/Matt23332/maze_dungeon_game" target="_blank">View on GitHub</a>
+          <a href="https://Matt23332.github.io/maze_dungeon_game" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    </div>
   </section>
 
 </body>
