@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - My Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
   <nav>
@@ -20,18 +21,49 @@
     <h1>Contact Me</h1>
     <form id="contact-form" method="post" action="#">
       <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br />
+      <input type="text" id="name" name="from_name" placeholder="Enter your name" required /><br />
 
       <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br />
+      <input type="email" id="email" name="from_email" placeholder="Enter your email" required /><br />
 
       <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br />
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea><br />
 
       <button type="submit">Send</button>
     </form>
-    <p>integrate EmailJS, Formspree, or other APIs for the form functionality.</p>
+    <p id="form-status"></p>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Mwenda Muriithi. All rights reserved.</p>
+    <p>Follow me on
+      <ul>
+        <li><a href="https://github.com/Matt23332"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+      or contact me via mobile: <a href="tel:+254722691758">+254 722 691 758</a>
+    </p>
+  </footer>
+
+<script>
+  (function() {
+    emailjs.init("eNKtddHjfln9F4QjP");
+  }) ();
+
+  function sendEmail(event) {
+    event.preventDefault();
+    const form = document.getElementById('contact-form');
+    emailjs.sendForm('service_3u88r4s', 'template_2ohylpl', form)
+      .then(() => {
+        document.getElementById("form-status").innerHTML = "Message sent successfully!";
+        form.reset();
+      })
+      .catch((error) => {
+        document.getElementById("form-status").innerHTML = "Error sending message. Please try again.";
+        console.error('Error sending email:', error);
+      });
+  }
+</script>
 
 </body>
 </html>
