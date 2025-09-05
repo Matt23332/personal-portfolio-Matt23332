@@ -20,18 +20,20 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #f4f4f4;
   padding: 10px 15px;
   display: inline-block;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #45a;
+  border-radius: 4px;
+  
 }
 
 header, section {
-  background: white;
+  background: #45a;
   padding: 20px;
   margin-top: 20px;
   border-radius: 8px;
@@ -59,5 +61,28 @@ form button {
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0 20px 0; 
+  background: #333;
+  color: #f4f4f4;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  color: #f4f4f4;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
 }
